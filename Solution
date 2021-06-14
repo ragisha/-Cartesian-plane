@@ -1,0 +1,18 @@
+import java.util.*;
+class Solution {
+    public boolean solve(String[] moves, int x, int y) {
+        int cx = 0, cy = 0;
+        for (String i : moves) {
+            if (i == "NORTH") {
+                cy++; continue;
+            } else if (i == "SOUTH") {
+                cy--;  continue;
+            } else if (i == "EAST") {
+                cx++;  continue;
+            } else if (i == "WEST") {
+                cx--;  continue;
+            }
+        };
+        return (cx == x) || (cy == y);
+    }
+}
